@@ -7,8 +7,8 @@
 const CONTAINER = document.getElementById("grid-container");
 const COLS = 16;
 const ROWS = 16;
-const CELL_SIZE = 50; // JEDNA DEFINICJA
-const GRID_SIZE = 16; // JEDNA DEFINICJA
+const CELL_SIZE = 50;
+const GRID_SIZE = 16; 
 let monitorIntervalID = null;
 let allPlanes = [];
 
