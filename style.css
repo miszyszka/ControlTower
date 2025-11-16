@@ -1,0 +1,65 @@
+/* Reset i podstawowy styl */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa;
+  color: #222;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#grid-container {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(16, 50px);
+  grid-template-rows: repeat(16, 50px);
+}
+
+.grid-cell {
+  background-color: rgb(203, 203, 203);
+  box-sizing: border-box; /* Ważne, aby border nie zwiększał rozmiaru komórki */
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.brown {
+  background-color: #a0522d; /* Brązowy kolor tła */
+  color: white; /* Biały tekst dla kontrastu */
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.plane-svg {
+  fill: #7d7d7d;
+  width: 50px;
+  height: 45px;
+}
+
+.mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #13d00d;
+  z-index: 100;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.plane {
+  position: absolute; 
+  z-index: 10;
+  transition: 1s ease-in;
+}
+
