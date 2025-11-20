@@ -5,10 +5,14 @@
   padding: 0;
 }
 
+:root {
+  --gray: #bdbdbd; /* albo dowolny odcień */
+  --white: #e5e5e5;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f8fa;
-  color: #222;
+  background-color: var(--white);
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -26,17 +30,20 @@ body {
 }
 
 .grid-cell {
-  background-color: rgb(203, 203, 203);
+  background-color: var(--gray);
   box-sizing: border-box; /* Ważne, aby border nie zwiększał rozmiaru komórki */
 }
 
 .white {
-  background-color: #ffffff;
+  background-color: var(--white)
+}
+
+.grey{
+  background-color: var(--gray)
 }
 
 .brown {
   background-color: #a0522d; /* Brązowy kolor tła */
-  color: white; /* Biały tekst dla kontrastu */
   padding: 5px;
   border-radius: 3px;
   font-size: 14px;
@@ -47,6 +54,17 @@ body {
   width: 50px;
   height: 45px;
 }
+.halfCell{
+  background-color: var(--white);
+  width: 50px;
+  height: 25px;
+}
+
+.quarterCell{
+  background-color: var(--gray);
+  width: 25px;
+  height: 25px;
+}
 
 .mark {
   width: 10px;
@@ -54,12 +72,11 @@ body {
   border-radius: 50%;
   background-color: #13d00d;
   z-index: 100;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 .plane {
   position: absolute; 
   z-index: 10;
-  transition: 1s ease-in;
+  transition: 1s ease-in-out;
 }
 
